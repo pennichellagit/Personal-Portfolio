@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeCodeCamp Personal Portfolio</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- end font -->
+
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/a9ef899dd6.js" crossorigin="anonymous"></script>
+
+    <script src="node_modules\@splidejs\splide\dist\js\splide.min.js"></script>
+    <link rel="stylesheet" href="node_modules\@splidejs\splide\dist\css\splide.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+                width: '50%',
+                height: '100%',
+                rewind: true,
+            });
+            splide.mount();
+
+            const navbar = document.getElementById("navbar");
+            const projects = document.getElementById("projects");
+            window.onscroll = function () {
+                if (window.scrollY > projects.offsetTop && navbar.classList.contains("hidden")) {
+                    navbar.classList.remove("hidden");
+                } else if (window.scrollY < projects.offsetTop && !navbar.classList.contains("hidden")) {
+                    navbar.classList.add("hidden");
+                }
+            };
+        });
+
+
+
+    </script>
+    <!-- end JS -->
+
+</head>
+
+<body>
+    <nav id="navbar" class="hidden">
+        <div class="barra">
+            <a class="nav-bar nav-link" href="#welcome-section">homepage</a>
+            <a class="nav-bar nav-link" href="#projects">my projects</a>
+            <a class="nav-bar nav-link" href="#about">about me</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- welcome section -->
+        <section id="welcome-section">
+
+            <div class="welcome-box">
+                <h1>My name is <span>Sara</span></h1>
+                <p>
+                    and this is my idea of fun
+                </p>
+
+                <div class="welcome-box__navigation">
+                    <a class="nav-link" href="#projects">my projects</a>
+                    <a class="nav-link" href="#about">about me</a>
+                </div>
+            </div>
+        </section>
+        <!-- end welcome section -->
+
+
+        <section id="projects">
+            <div class="project-tile">
+                <h1>Some of my projects</h1>
+                <p>These are all my projects from FreeCodeCamp, I am planning on adding more stuff and I have some ideas
+                    but for now this will do</p>
+            </div>
+
+            <!-- carousel -->
+            <div class="center">
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><a class="desc"
+                                    href="https://pennichellagit.github.io/My-first-Survey-Form/" target="_blank">
+                                    <img class="carousel-img" src="img/Survey-Form.png"
+                                        alt="screenshot from survey main page">
+                                    <div class="desc-box">
+                                        <p>First project I submitted via FreeCodeCamp in HTML and CSS. <br>
+                                            I had to craft a responsive web form by structuring the form, labeling input
+                                            fields, styling with CSS,
+                                            ensuring validation, and adding a submission button.<br>
+                                            I decided to make it about traveling/tourism, as that's my field and I'm
+                                            very passionate about it.</p>
+                                    </div>
+                                </a></li>
+                            <li class="splide__slide"><a class="desc"
+                                    href="https://pennichellagit.github.io/Tribute-to-Seppala/" target="_blank">
+                                    <img class="carousel-img" src="img/Tribute-Page.png"
+                                        alt="screenshot from tribute main page">
+                                    <div class="desc-box">
+                                        <p>For the Tribute Page project, I was required to create a web page dedicated
+                                            to a person or topic of interest. <br>
+                                            I chose to focus on Leonhard Seppala, inspired by my fascination with Alaska
+                                            and Nordic culture, particularly the world of sled dogs. <br>
+                                            In this project, I organized the content, included appropriate images and
+                                            implemented CSS for styling.</p>
+                                    </div>
+                                </a></li>
+                            <li class="splide__slide"><a class="desc"
+                                    href="https://pennichellagit.github.io/Technical-documentation/" target="_blank">
+                                    <img class="carousel-img" src="img/Technical-Documentation.png"
+                                        alt="screenshot from technical main page">
+                                    <div class="desc-box">
+                                        <p>The objective of this project is to create a webpage that presents technical
+                                            documentation or information on a chosen topic using HTML and CSS. <br>
+                                            I decided to focus on JavaScript as I was following SoloLearn's course at
+                                            the time.<br>
+                                            This project focuses on structuring the content effectively, providing clear
+                                            navigation, and styling the page for readability.</p>
+                                    </div>
+                                </a></li>
+                            <li class="splide__slide"><a class="desc"
+                                    href="https://pennichellagit.github.io/Product-landing-project/" target="_blank">
+                                    <img class="carousel-img" src="img/Product-Page.png"
+                                        alt="screenshot from product main page">
+                                    <div class="desc-box">
+                                        <p>For this project I had to create a landing page for a product or service of
+                                            my choice. <br>
+                                            I structured the concept, implemented navigation links, applied styling and
+                                            layout design. <br>
+                                            To make it fun, I decided to base it on a silly dog video, embracing a
+                                            lighthearted approach.<br>
+                                            I am aware it is not finished, and one day I intend to complete it. For now,
+                                            I decided to move forward with other plans.</p>
+                                    </div>
+                                </a></li>
+                            <li class="splide__slide"><a class="desc" href="#" target="_blank">
+                                    <img class="carousel-img" src="img/Portfolio.png" alt="screenshot from main page">
+                                    <div class="desc-box">
+                                        <p>For my personal portfolio project, I've created a web page with multiple
+                                            sections and a navigation bar that enables easy access to
+                                            different parts of the page and incorporated links with images. <br>
+                                            I love nature and especially bugs, so I really wanted to design something
+                                            around that theme. <br>
+                                            I have so many ideas for my personal portfolio, but I still have so much to
+                                            learn. <br>
+                                            I look forward to returning to update it.</p>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!-- end carousel -->
+        </section>
+
+        <section id="about">
+            <div class="about-box">
+                <h1>About me</h1>
+
+                <div class="bolla">
+                    <div class="bolla-inner">
+                        <div class="bolla front"></div> <!--front picture -->
+                        <div class="bolla back"></div> <!-- back picture -->
+                    </div>
+                </div>
+
+                <div class="p-box">
+                    <p> In the picture: me, excavating a (fake) fossil.<br><br>
+                        In the past year, I stumbled upon <b>Front-End Development</b> and its technologies. <br>
+                        My journey began by diving into projects through <a href="https://www.freecodecamp.org/"
+                            target="_blank">FreeCodeCamp</a> and <a href="https://www.sololearn.com/"
+                            target="_blank">sololearn</a>, learning HTML and CSS. <br>
+                        This path has been an incredibly fun adventure, one that I hope will continue to grow. <br>
+                        I'm very excited about where this can lead me. <br>
+                        <br>
+
+                        Next stop: <a
+                            href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/"
+                            target="_blank">JavaScript Algorithms and Data Structures</a>. See ya there!
+                    </p>
+                </div>
+                <div class="icons"><a id="profile-link" href="https://github.com/pennichellagit" target="_blank"><i
+                            class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
+                    <a id="profile-link" href="mailto: kooka.nova@gmail.com" target="_blank"><i
+                            class="fa-solid fa-envelope fa-2xl" style="color: #000000;"></i></a>
+                    <a id="profile-link" href="https://www.linkedin.com/in/sara-minichino-a2a063207/" target="_blank"><i
+                            class="fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+
+</html>
